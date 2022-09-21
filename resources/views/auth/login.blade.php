@@ -72,6 +72,9 @@
                             @endif
                         </div>
                         <div class="box-footer">
+                            <a href="{{ url('login/google')}}" class="btn btn-lg btn-primary btn-block">
+                               Universiti Malaysia Terengganu
+                            </a>
                             @if (config('app.require_saml'))
                             <a class="btn btn-lg btn-primary btn-block" href="{{ route('saml.login')  }}">{{ trans('auth/general.saml_login')  }}</a>
                             @else

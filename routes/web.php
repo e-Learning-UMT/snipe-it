@@ -486,3 +486,7 @@ Route::middleware(['auth'])->get(
     '/',
     [DashboardController::class, 'index']
 )->name('home');
+
+Route::get('/login/google', [LoginController::class, 'redirectToProvider']);
+
+Route::get('/login/google/callback', [LoginController::class, 'handleProviderCallback']);
