@@ -590,13 +590,8 @@ class LoginController extends Controller
             // log them in
             auth()->login($existingUser, true);
         } else {
-            // create a new user
-            $newUser                  = new User;
-            $newUser->first_name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->password        = 'universitimalaysiaterengganu';
-            $newUser->save();
-            auth()->login($newUser, true);
+            return redirect('/login');
+
         }
         return redirect()->to('/');
     }
